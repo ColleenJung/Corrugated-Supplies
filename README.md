@@ -96,17 +96,17 @@ pytest tests/
 
 ## Model Details
 
+### Defect Detection
+We employed a dual approach using both a customized YOLOv8 model and Azure Custom Vision. YOLOv8 was trained to detect specific damage categories such as gouged, busted, crushed core, and wet/foreign substances. Azure Custom Vision provided an additional layer of classification to cross-validate the detections.
+
 ### Dimension Measurement
-
-We utilized OpenCV and TensorFlow to create a bounding box on objects and obtain dimensional measurements. The model can accurately measure the length, height, and breadth of corrugated boxes in real-time.
-
-### Anomaly Detection
-
-Early work on anomaly detection shows promising results in identifying defects like tears, waves, and delamination in the material using both custom-trained YOLOv8 models and Google's Vertex AI Vision.
+Using OpenCV and TensorFlow, we developed a solution to measure product dimensions accurately. The system uses a "pixels per metric" method for calibration, enabling precise calculation of damage areas on corrugated boards.
 
 ### Label Extraction
+OCR tools like PyTesseract and EasyOCR were integrated with Azure Computer Vision services to automate the label extraction process, improving the accuracy of credit claim processing.
 
-OCR tools such as PyTesseract and EasyOCR were employed to extract and analyze labels from paper rolls, with efforts to improve accuracy through image preprocessing techniques.
+### Real-time Monitoring and Alerting
+The system includes a real-time monitoring feature that captures video feeds from the production line, processes the data, and triggers alerts for any detected anomalies. Microsoft Power Apps and Power Automate were used to develop a user-friendly interface and automate workflows.
 
 ## Accomplishments & Next Steps
 
@@ -128,7 +128,7 @@ OCR tools such as PyTesseract and EasyOCR were employed to extract and analyze l
 - Ayan Raheel
 - Thomas Shi
 - Nia Gangar
-- Chris Saldivar
+- Chris Saldivar(Power Platform professional who assisted with app design and integration)
 
 ## License
 
